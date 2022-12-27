@@ -15,11 +15,7 @@ require("mamo.plugins.telescope") -- fzf integration
 -- Git integration
 require("mamo.plugins.gitsigns")
 --lsp
-require("mamo.plugins.nvim-cmp")
-require("mamo.plugins.lsp.mason")
-require("mamo.plugins.lsp.lspsaga")
-require("mamo.plugins.lsp.lspconfig")
-require("mamo.plugins.lsp.null-ls")
+require("mamo.plugins.lsp")
 -- Utils
 require("mamo.plugins.autopairs")
 require("mamo.plugins.comment")

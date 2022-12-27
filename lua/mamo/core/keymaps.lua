@@ -5,8 +5,12 @@ local keymap = vim.keymap
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
--- clear seyarch highlights
+-- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
+
+-- keep search item into page center 
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -36,6 +40,7 @@ keymap.set("n", "∆", ":m .+1<CR>==")
 keymap.set("n", "˚", ":m .-2<CR>==")
 keymap.set("v", "∆", ":m '>+1<CR>gv=gv")
 keymap.set("v", "˚", ":m '<-2<CR>gv=gv")
+
 
 ----------------------
 -- Plugin Keybinds

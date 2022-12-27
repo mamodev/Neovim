@@ -81,28 +81,33 @@ return packer.startup(function(use)
 	------------------
 	-- LSP for NVIM --
 	------------------
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		requires = {
+			-- managing & installing lsp servers, linters , formatters
+			use("neovim/nvim-lspconfig"),
+			use("williamboman/mason.nvim"), -- in charge of managing lsp servers, linters & formatters
+			use("williamboman/mason-lspconfig.nvim"), -- bridges gap b/w mason & lspconfig
 
-	-- managing & installing lsp servers, linters , formatters
-	use("neovim/nvim-lspconfig")
-	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
-	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+			-- Autocompletion
+			use("hrsh7th/nvim-cmp"), -- completion plugin
+			use("hrsh7th/cmp-buffer"), -- source for text in buffer
+			use("hrsh7th/cmp-path"), -- source for file system paths
+			use("saadparwaiz1/cmp_luasnip"), -- for autocompletion
+			use("hrsh7th/cmp-nvim-lsp"), -- for autocompletion
+			use("hrsh7th/cmp-nvim-lua"), -- for autocompletion
 
-	-- Autocompletion
-	use("hrsh7th/nvim-cmp") -- completion plugin
-	use("hrsh7th/cmp-buffer") -- source for text in buffer
-	use("hrsh7th/cmp-path") -- source for file system paths
-	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use("hrsh7th/cmp-nvim-lua") -- for autocompletion
-
-	-- snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("rafamadriz/friendly-snippets") -- useful snippets:
+			-- snippets
+			use("L3MON4D3/LuaSnip"), -- snippet engine
+			use("rafamadriz/friendly-snippets"), -- useful snippets:
+		},
+	})
 
 	-- Lsp server utils
-	use("onsails/lspkind.nvim") -- vs-code like icons for NVIM LSP
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp UI
+	-- use("onsails/lspkind.nvim") -- vs-code like icons for NVIM LSP
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp UI
 	-- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	---------------- END LSP ----------------
 
 	-- formatting & linting
 	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
