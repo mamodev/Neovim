@@ -16,6 +16,9 @@ require("mamo.plugins.telescope") -- fzf integration
 require("mamo.plugins.gitsigns")
 --lsp
 require("mamo.plugins.lsp")
+require("mamo.plugins.lspsaga")
+-- Linters and Formatters
+require("mamo.plugins.null-ls")
 -- Utils
 require("mamo.plugins.autopairs")
 require("mamo.plugins.comment")

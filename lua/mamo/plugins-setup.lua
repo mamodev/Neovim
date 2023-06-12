@@ -58,20 +58,20 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
+
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
-
-	--tabs
-	use("akinsh/bufferline.nvim")
-	--	use("moll/vim-bbye")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
 	--undotree
 	use("mbbill/undotree")
+
 	-- themes
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorschemes
+	use({ "bluz71/vim-moonfly-colors", branch = "cterm-compat" })
+
 	use("lunarvim/colorschemes")
 
 	-- fuzzy finding w/ telescope
@@ -104,13 +104,13 @@ return packer.startup(function(use)
 	})
 
 	-- Lsp server utils
-	-- use("onsails/lspkind.nvim") -- vs-code like icons for NVIM LSP
-	-- use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp UI
-	-- use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+	use("onsails/lspkind.nvim") -- vs-code like icons for NVIM LSP
+	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp UI
+	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	---------------- END LSP ----------------
 
 	-- formatting & linting
-	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	-- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
 	-- auto closing

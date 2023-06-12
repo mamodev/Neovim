@@ -1,7 +1,12 @@
 require("bufferline").setup({
 	options = {
-		diagnostic = "nvim_lsp",
-		offsets = {
+		diagnostics = "nvim_lsp",
+        diagnostics_update_in_insert = true,
+        diagnostics_indicator = function(_, level,_, _)
+          local icon = level:match("error") and " " or " "
+          return icon
+        end,
+        offsets = {
 			{
 				filetype = "NvimTree",
 				text = "File Explorer",

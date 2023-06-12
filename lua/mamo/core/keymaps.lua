@@ -8,7 +8,7 @@ keymap.set("i", "jk", "<ESC>")
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
--- keep search item into page center 
+-- keep search item into page center
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
@@ -41,7 +41,6 @@ keymap.set("n", "˚", ":m .-2<CR>==")
 keymap.set("v", "∆", ":m '>+1<CR>gv=gv")
 keymap.set("v", "˚", ":m '<-2<CR>gv=gv")
 
-
 ----------------------
 -- Plugin Keybinds
 ----------------------
@@ -62,3 +61,11 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>") -- list available 
 
 --undo tree
 keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>")
+
+--formatters
+-- opt-f
+keymap.set("n", "ƒ", "<cmd>lua vim.lsp.buf.format()<cr>")
+keymap.set("v", "ƒ", "<cmd>lua vim.lsp.buf.format()<cr>")
+-- opt-s
+keymap.set("n", "ß", "<cmd>lua vim.lsp.buf.format()<cr> <Bar> :w <cr>")
+keymap.set("i", "ß", "<cmd>lua vim.lsp.buf.format()<cr> <Bar> :w <cr>")

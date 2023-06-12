@@ -3,4 +3,9 @@ if not status then
 	return
 end
 
-scrollbar.setup()
+
+scrollbar.setup({
+     marks = {
+        Error = { color = '#f7768e' }
+    }
+})
